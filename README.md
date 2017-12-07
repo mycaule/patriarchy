@@ -20,8 +20,10 @@ I wrote this library to pretty print JSON describing identify records. The code 
 
 You can use this as an alternative method to `JSON.stringify` when the fields name are obvious to the reader.
 
+```javascript
+console.log(JSON.stringify(obj, null, 2))
 ```
-// console.log(JSON.stringify(obj, null, 2))
+```
 {
   "name": "Katy Perry",
   "description": "American singer-songwriter",
@@ -37,8 +39,13 @@ You can use this as an alternative method to `JSON.stringify` when the fields na
 
   "url": "http://www.katyperry.com/"
 }
+```
 
-// console.log(patriarchy(obj))
+```javascript
+const patriarchy = require('patriarchy')
+console.log(patriarchy(obj))
+```
+```
 Katy Perry
 │ American singer-songwriter
 │ http://www.katyperry.com/
