@@ -34,3 +34,20 @@ test('Level 1 printing', t => {
       https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
 `)
 })
+
+test('Supported types that are human readable: string, number', t => {
+  const obj = {
+    a1: 1,
+    b1: {
+      a2: 2,
+      b2: null,
+      c2: 'ok',
+      d3: undefined
+    }
+  }
+
+  t.is(patriarchy(obj), `1
+└── 2
+  │ ok
+`)
+})
