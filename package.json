@@ -1,6 +1,6 @@
 {
   "name": "patriarchy",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Render nested hierarchies based only on values",
   "main": "index.js",
   "scripts": {

@@ -60,8 +60,10 @@ Katy Perry
 
 #### Command-line interface
 
+Install the tool globally `npm install -g patriarchy` or use with `npx patriarchy` if this is available in your Node.js version.
+
 ```bash
-$ npx patriarchy "a1: 'hello', b1: { a2: 'world', b2: '!' }"
+$ patriarchy '{"a1": "hello", "b1": {"a2": "world", "b2": "!"}}'
 hello
 └── world
     !

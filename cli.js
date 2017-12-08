@@ -1,9 +1,7 @@
+#!/usr/bin/env node
+
+'use strict'
+
 const patriarchy = require('./index')
 
-console.log(patriarchy({
-  a1: 'hello',
-  b1: {
-    a2: 'world',
-    b2: '!'
-  }
-}))
+console.log(patriarchy(JSON.parse(process.argv.slice(1)[0])))
