@@ -41,6 +41,8 @@ console.log(JSON.stringify(obj, null, 2))
 }
 ```
 
+#### JavaScript (browser or Node.js)
+
 ```javascript
 const patriarchy = require('patriarchy')
 console.log(patriarchy(obj))
@@ -56,14 +58,18 @@ Katy Perry
     https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
 ```
 
+#### Command-line interface
+
+```bash
+$ patriarchy "a1: 'hello', b1: { a2: 'world', b2: '!' }"
+hello
+└── world
+    !
+```
 
 ## Contributions
 
 [Changes and improvements](https://github.com/mycaule/patriarchy/wiki) are welcome! Feel free to fork and open a pull request into `master`.
-
-### Roadmap
-
-- [ ] Command line usage using `npx` ?
 
 ### Running the tests
 
