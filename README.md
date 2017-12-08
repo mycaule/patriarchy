@@ -61,7 +61,7 @@ Katy Perry
 #### Command-line interface
 
 ```bash
-$ patriarchy "a1: 'hello', b1: { a2: 'world', b2: '!' }"
+$ npx patriarchy "a1: 'hello', b1: { a2: 'world', b2: '!' }"
 hello
 └── world
     !
