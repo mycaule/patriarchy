@@ -41,7 +41,7 @@ console.log(JSON.stringify(obj, null, 2))
 }
 ```
 
-#### JavaScript (browser or Node.js)
+#### JavaScript
 
 ```javascript
 const patriarchy = require('patriarchy')
@@ -51,9 +51,9 @@ console.log(patriarchy(obj))
 Katy Perry
 │ American singer-songwriter
 │ http://www.katyperry.com/
-├── http://t3.gstatic.com/images?q=tbn:ANd9GcQrlKFmaiEtUImNiuD_pqzHPjDcjF4yaRThSFMh-rYuB8snFUfk
+├─┬ http://t3.gstatic.com/images?q=tbn:ANd9GcQrlKFmaiEtUImNiuD_pqzHPjDcjF4yaRThSFMh-rYuB8snFUfk
 │   https://en.wikipedia.org/wiki/Katy_Perry
-└── Katheryn Elizabeth Hudson, known professionally as Katy Perry, is an American singer and songwriter. After singing in church during her childhood, she pursued a career in gospel music as a teenager.
+└─┬ Katheryn Elizabeth Hudson, known professionally as Katy Perry, is an American singer and songwriter. After singing in church during her childhood, she pursued a career in gospel music as a teenager.
     https://en.wikipedia.org/wiki/Katy_Perry
     https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
 ```
@@ -65,7 +65,7 @@ Install the tool globally `npm install -g patriarchy` or use with `npx patriarch
 ```bash
 $ patriarchy '{"a1": "hello", "b1": {"a2": "world", "b2": "!"}}'
 hello
-└── world
+└─┬ world
     !
 ```
 
@@ -78,12 +78,6 @@ hello
 You can lint the code and run all unit tests using that script.
 ```bash
 npm test
-```
-
-### Publishing
-```bash
-npm version [patch, minor, major]
-npm publish
 ```
 
 ### License

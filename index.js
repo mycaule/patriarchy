@@ -2,13 +2,14 @@ const patriarchy = (obj, prefix = '') => {
   const isReadable = o => (typeof o === 'string' || typeof o === 'number')
   const isParsable = o => (typeof o === 'object' && o !== null)
 
-  // Partitioning the objects between readable and not readable
-  const [lines, nodes] = Object.keys(obj)
-    .map(key => obj[key])
-    .reduce((acc, obj) => {
-      acc[isReadable(obj) ? 0 : 1].push(obj)
+  const partition = o => Object.keys(o)
+    .map(key => o[key])
+    .reduce((acc, o) => {
+      acc[isReadable(o) ? 0 : 1].push(o)
       return acc
     }, [[], []])
+
+  const [lines, nodes] = partition(obj)
 
   const splitter = '\n' + prefix + (nodes.length ? '│' : ' ') + ' '
 
@@ -19,7 +20,8 @@ const patriarchy = (obj, prefix = '') => {
       .filter(isParsable)
       .map((node, ix) => {
         const last = ix === nodes.length - 1
-        const more = node.nodes && node.nodes.length
+        const nnodes = partition(obj)[1]
+        const more = nnodes && nnodes.length
         const prefix_ = prefix + (last ? ' ' : '│') + ' '
 
         return prefix +
